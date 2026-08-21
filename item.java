@@ -1,4 +1,4 @@
-public class item {
+public class Item {
     private int itemNo;
     private String title;
     private double rate;
@@ -30,7 +30,7 @@ public class item {
 
 
     // constructor
-    public item(int itemNo,String title,double rate){
+    public Item(int itemNo,String title,double rate){
         this.itemNo=itemNo;
         this.title=title;
         this.rate=rate;
