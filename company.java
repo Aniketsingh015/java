@@ -53,4 +53,23 @@ class Company{
         //customer initialize
         this.customers=new ArrayList<Customer>();
     }
+
+
+    // functional Mthods
+
+    public double getTotalOrderValue(){
+        double totalOrderValue =0.0;
+        
+        for(Customer customer:this.customers){//first go inside single customer
+            for(Order order:customer.getOrders()){//then go to the order of that customer
+                for(OrderItem orderItem:order.getorderItems()){//then go to the order item for that customer
+                    totalOrderValue+=orderItem.getQuantity() * orderItem.getItem().getrate();//this is the formula so acccording to 
+                    // getting inside think of formula then get inside and think every function is there or no
+                }
+            }
+        }
+        return totalOrderValue;
+        
+    }
+    
 }
