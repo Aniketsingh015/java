@@ -1,6 +1,10 @@
+import java.util.*;
+
 class Customer{
     private int customerId;
     private String Name;
+
+    private List<Order>orders;
 
     public int getCustomerId(){
         return this.customerId;
@@ -16,6 +20,21 @@ class Customer{
 
     public void setName(String Name){
         this.Name=Name;
+    }
+
+ // getter and setter for list of orders
+    public List<Order> getOrders(){
+        return this.orders;
+    }
+
+    public void setOrders(Order order){
+        this.orders.add(order);
+    }
+
+    // consturctor
+    public Customer(){
+        // initializing the list
+        this .orders=new ArrayList<>();
     }
 
 }
