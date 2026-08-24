@@ -1,5 +1,7 @@
 import java.util.*;
 
+//here we have added order as has a bidirectional and registered customer is a relation
+
 class Customer{
     private int customerId;
     private String Name;
@@ -27,14 +29,14 @@ class Customer{
         return this.orders;
     }
 
-    public void setOrders(Order order){
+    public void addOrders(Order order){
         this.orders.add(order);
     }
 
     // consturctor
     public Customer(){
         // initializing the list
-        this .orders=new ArrayList<>();
+        this .orders=new ArrayList<Order>();
     }
 
 }
