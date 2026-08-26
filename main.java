@@ -14,6 +14,12 @@ public class main {
         var pant=new Item(2,"Levis",3000);
         var shoes=new Item(2,"nike",5000);
 
+        // company purchased and added items it will go with company and item relationship
+        company.addItem(shirt);
+        company.addItem(pant);
+        company.addItem(shoes);
+        
+
 
         System.out.println(company.getTotalOrderValue()+"this is the total order value of the company");
     }
