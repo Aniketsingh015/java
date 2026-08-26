@@ -54,8 +54,33 @@ public class main {
         company.addCustomer(regularCustomer);
 
 
+// --------------------------------------
 
-        
+// register customer walks into the store to buy some items from the store.thy are entitled for dicount
+        var registeredCustomer=new RegisteredCustomer("Siddhant");
+        registeredCustomer.setName("Siddhant");
+        registeredCustomer.setDiscount(20);// here we are setting the discount for the registered customer
+    //registered customer wants to buy two pants and 2 shirt
+       var orderItem3=new OrderItem();
+         orderItem3.setItem(shirt);
+            orderItem3.setQuantity(2);
+        var orderItem4=new OrderItem();
+        orderItem4.setItem(pant);
+        orderItem4.setQuantity(2);
+
+
+        // registered customer walks towards the billing counter
+        var registerOrder=new Order();
+        registerOrder.setorderId(2);
+        registerOrder.setCustomer(registeredCustomer);
+
+        registerOrder.addOrderItem(orderItem3);
+        registerOrder.addOrderItem(orderItem4);
+// now payment is done and order is handed over to the registered customer
+        registeredCustomer.addOrders(registerOrder);
+        company.addCustomer(registeredCustomer);
+
+
 
 
         System.out.println(company.getTotalOrderValue()+"this is the total order value of the company");
