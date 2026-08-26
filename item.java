@@ -12,7 +12,7 @@ public class Item {
         this.itemNo=itemNo;
     }
 
-    public String title(){
+    public String getTitle(){
         return this.title;
     }
 

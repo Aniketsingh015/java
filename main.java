@@ -18,6 +18,10 @@ public class main {
         company.addItem(shirt);
         company.addItem(pant);
         company.addItem(shoes);
+
+        for(Item item:company.getItems()){
+            System.out.println(item.getTitle()+"-"+item.getrate());
+        }
         
 
 
