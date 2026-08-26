@@ -34,7 +34,7 @@ class Customer{
     }
 
     // consturctor
-    public Customer(){
+    public Customer(String Name){
         // initializing the list
         this .orders=new ArrayList<Order>();
     }
