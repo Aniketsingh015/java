@@ -46,6 +46,13 @@ public class main {
         regularOrder.addOrderItem(orderItem1);
         regularOrder.addOrderItem(orderItem2);
 
+        // the regular customer made the payment and order was handed over
+        regularCustomer.addOrders(regularOrder);
+
+        // transaction is complete now i add customer to company
+
+        company.addCustomer(regularCustomer);
+
 
 
         

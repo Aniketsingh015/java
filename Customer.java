@@ -42,15 +42,15 @@ class Customer{
 }
 
 
-class registeredCustomer extends Customer{
-private double discount;
+// public class registeredCustomer extends Customer{
+// private double discount;
 
-public double getDiscount(){
-        return this.discount;
-    }
- public void setDiscount(double discount){
-        this.discount=discount;
-    }
+// public double getDiscount(){
+//         return this.discount;
+//     }
+//  public void setDiscount(double discount){
+//         this.discount=discount;
+//     }
 
 
-}
+// }

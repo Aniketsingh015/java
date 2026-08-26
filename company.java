@@ -39,7 +39,7 @@ class Company{
     public List<Customer> getCustomer(){
         return this.customers;
     }
-    public void setCustomer(Customer customer){
+    public void addCustomer(Customer customer){
         this.customers.add(customer);
     }
 
