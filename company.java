@@ -60,19 +60,24 @@ class Company{
     public double getTotalOrderValue(){
         double totalOrderValue =0.0;
         
-        for(Customer customer:this.customers){//first go inside single customer
-            for(Order order:customer.getOrders()){//then go to the order of that customer
-                for(OrderItem orderItem:order.getorderItems()){//then go to the order item for that customer
-                    if(customer instanceof RegisteredCustomer){//here we are checking if the customer is registered or not
-                        RegisteredCustomer rc=(RegisteredCustomer)customer;//here we are type casting customer to registered customer so that we can access the discount method of registered customer
-                        double discount=rc.getDiscount();//here we are getting the discount of the registered customer
-                        totalOrderValue+=orderItem.getQuantity() * orderItem.getItem().getrate()*((1-discount)/100);
-                    }else{
-                    totalOrderValue+=orderItem.getQuantity() * orderItem.getItem().getrate();//this is the formula so acccording to 
-                    // getting inside think of formula then get inside and think every function is there or no
-                }
-            }
-            }
+        // for(Customer customer:this.customers){//first go inside single customer
+        //     for(Order order:customer.getOrders()){//then go to the order of that customer
+        //         for(OrderItem orderItem:order.getorderItems()){//then go to the order item for that customer
+        //             if(customer instanceof RegisteredCustomer){//here we are checking if the customer is registered or not
+        //                 RegisteredCustomer rc=(RegisteredCustomer)customer;//here we are type casting customer to registered customer so that we can access the discount method of registered customer
+        //                 double discount=rc.getDiscount();//here we are getting the discount of the registered customer
+        //                 totalOrderValue+=orderItem.getQuantity() * orderItem.getItem().getrate()*((1-discount)/100);
+        //             }else{
+        //             totalOrderValue+=orderItem.getQuantity() * orderItem.getItem().getrate();//this is the formula so acccording to 
+        //             // getting inside think of formula then get inside and think every function is there or no
+        //         }
+        //     }
+        //     }
+        // }
+
+// we will not have if elese we will have every other logic in the table it is associated
+        for(Customer customer:this.customers){
+            totalOrderValue+=customer.getTotalOrderValue();
         }
         return totalOrderValue;
         
