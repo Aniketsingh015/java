@@ -15,5 +15,16 @@ public double getDiscount(){
     }
 
 
+    // functional method
+    @Override
+    public double getTotalOrderValue(){
+        // here logic with discount
+        double totalOrderValue =0.0;
+
+        return 0.0;
+    }
+        
+
+
 }
 
