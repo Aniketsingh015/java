@@ -39,6 +39,17 @@ class Customer{
         this .orders=new ArrayList<Order>();
     }
 
+
+    // functional methods
+     
+    public virtual double getTotalOrderValue(){
+        // here logic without discount
+        double totalOrderValue =0.0;
+
+        return 0.0;
+    }
+        
+
 }
 
 
