@@ -64,7 +64,7 @@ public class main {
 // register customer walks into the store to buy some items from the store.thy are entitled for dicount
         var registeredCustomer=new RegisteredCustomer("Siddhant");
         registeredCustomer.setName("Siddhant");
-        registeredCustomer.setDiscount(20);// here we are setting the discount for the registered customer
+        registeredCustomer.setDiscount(10);// here we are setting the discount for the registered customer
     //registered customer wants to buy two pants and 2 shirt
     registeredCustomer.setFees(10000.0);
     registeredCustomer.setmembershipType("gold");
