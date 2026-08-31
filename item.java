@@ -20,11 +20,11 @@ public class Item {
         this.title=title;
     }
 
-    public double getrate(){
+    public double getRate(){
         return this.rate;
     }
 
-    public void setrate(double rate){
+    public void setRate(double rate){
         this.rate=rate;
     }
 
