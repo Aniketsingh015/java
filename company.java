@@ -59,6 +59,20 @@ class Company{
 
     public double getTotalOrderValue(){
         double totalOrderValue =0.0;
+
+// we will not have if elese we will have every other logic in the table it is associated we only itterate over the customer and it will be calculated acc to the customer
+        for(Customer customer:this.customers){
+            totalOrderValue+=customer.getTotalOrderValue();
+        }
+        return totalOrderValue;
+        
+    }
+
+
+    // this is commented out because it hve ocp violation 
+        // OCP-open closed principle
+        // the code should be open for extension but closed for modifications-----so this total order value we will do calcultion on type of customer we have
+
         
         // for(Customer customer:this.customers){//first go inside single customer
         //     for(Order order:customer.getOrders()){//then go to the order of that customer
@@ -74,13 +88,5 @@ class Company{
         //     }
         //     }
         // }
-
-// we will not have if elese we will have every other logic in the table it is associated
-        for(Customer customer:this.customers){
-            totalOrderValue+=customer.getTotalOrderValue();
-        }
-        return totalOrderValue;
-        
-    }
     
 }
