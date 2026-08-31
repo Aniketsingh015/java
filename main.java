@@ -21,7 +21,7 @@ public class main {
 
         //check the items that have been added
         for(Item item:company.getItems()){
-            System.out.println(item.getTitle()+"-"+item.getrate());
+            System.out.println(item.getTitle()+"-"+item.getRate());
         }
 
         // regular customer walked in for buying things from shop
