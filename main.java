@@ -52,6 +52,7 @@ public class main {
         // transaction is complete now i add customer to company
 
         company.addCustomer(regularCustomer);
+         System.out.println(company.getTotalOrderValue()+"this is the total order value of the company");
 
 
 // --------------------------------------
