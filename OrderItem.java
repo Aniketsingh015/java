@@ -18,5 +18,10 @@ public class OrderItem {
         this.quantity=quantity;
     }
 
+    // now order item class is taking the responsiblity for calculating the total value of order
+    public  double getItemTotal(){
+        return this.quantity*this.item.getRate();
+    }
+
   
 }
