@@ -22,12 +22,12 @@ public double getDiscount(){
         double totalOrderValue =0.0;
         
             for(Order order:this.getOrders()){//then go to the order of that customer
-                for(OrderItem orderItem:order.getorderItems()){//then go to the order item for that customer
+                
                     
                         double discount=this.getDiscount();//here we are getting the discount of the registered customer
-                        totalOrderValue+=orderItem.getQuantity() * orderItem.getItem().getrate()*((1-discount)/100);
+                        totalOrderValue+=order.getTotalOrderValue()*((1-discount)/100);
                     }
-            }
+            
             
         
 
