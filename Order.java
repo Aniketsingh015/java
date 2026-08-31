@@ -33,4 +33,12 @@ public class Order {
     public Order(){
         this.orderItems=new ArrayList<OrderItem>();
     }
+
+    public double getTotalOrderValue(){
+        double totalOrderValue=0.0;
+        for(OrderItem orderItem:this.getorderItems()){
+            totalOrderValue+=orderItem.getItemTotal();
+        }
+        return totalOrderValue;
+    }
 }
