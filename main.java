@@ -66,6 +66,8 @@ public class main {
         registeredCustomer.setName("Siddhant");
         registeredCustomer.setDiscount(20);// here we are setting the discount for the registered customer
     //registered customer wants to buy two pants and 2 shirt
+    registeredCustomer.setFees(10000.0);
+    registeredCustomer.setmembershipType("gold");
        var orderItem3=new OrderItem();
          orderItem3.setItem(shirt);
             orderItem3.setQuantity(2);
