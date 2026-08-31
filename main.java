@@ -1,6 +1,10 @@
 // we have to get the report for the total order value
 
-
+/* requirement 2 
+now the platinume customer has to pay fees of 20,000 one time and will get 20% discount on each order
+now the gold customer has to pay fees of 10,000 one time and will get 10% discount on each order
+now the silver customer has to pay fees of 5,000 one time and will get 5% discount on each order
+*/
 public class main {
     public static void main(String[] args) {
         var company=new Company("Shopper Stop");
