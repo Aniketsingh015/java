@@ -40,18 +40,19 @@ class Customer{
     }
 
 
-    // functional methods
+    // functional methods----before we were calling customer->order ->order items so if anything changes in order items customer will also break 
+    // so now we seprate the order item with its own calculation and we are calling order item in order class and in this class we are just calling order
      
     public double getTotalOrderValue(){
         // here logic without discount
         double totalOrderValue =0.0;
             for(Order order:this.getOrders()){//then go to the order of that customer. in this we dont have to itterate over customer as we are getting about which customer we are talking about
-                for(OrderItem orderItem:order.getorderItems()){//then go to the order item for that customer
+                
                     
-                    totalOrderValue+=orderItem.getQuantity() * orderItem.getItem().getrate();//this is the formula so acccording to 
+                    totalOrderValue+=order.getTotalOrderValue();//this is the formula so acccording to 
                     // getting inside think of formula then get inside and think every function is there or no
                 }
-            }
+            
             
         
 
