@@ -64,10 +64,23 @@ public class main {
 // register customer walks into the store to buy some items from the store.thy are entitled for dicount
         var registeredCustomer=new RegisteredCustomer("Siddhant");
         registeredCustomer.setName("Siddhant");
-        registeredCustomer.setDiscount(10);// here we are setting the discount for the registered customer
-    //registered customer wants to buy two pants and 2 shirt
-    registeredCustomer.setFees(10000.0);
-    registeredCustomer.setmembershipType("gold");
+        // here we are setting the discount for the registered customer
+        // here we are having data memebers of registered customer class
+    //     registeredCustomer.setDiscount(10);
+    // registeredCustomer.setFees(10000.0);
+    // registeredCustomer.setmembershipType("gold");
+
+
+    var membership=new Membership();
+    membership.setmembershipType("platinum");
+    membership.setDiscount(20);
+    membership.setFees(20000.0);
+    registeredCustomer.setmembership(membership);
+
+
+    
+
+     //registered customer wants to buy two pants and 2 shirt
        var orderItem3=new OrderItem();
          orderItem3.setItem(shirt);
             orderItem3.setQuantity(2);
