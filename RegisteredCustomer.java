@@ -44,24 +44,24 @@ public Membership getMembership(){
 //     }
 
 
-    // // functional method
-    // @Override
-    // public double getTotalOrderValue(){
-    //     // here logic with discount
-    //     double totalOrderValue =0.0;
+    // functional method
+    @Override
+    public double getTotalOrderValue(){
+        // here logic with discount
+        double totalOrderValue =0.0;
         
-    //         for(Order order:this.getOrders()){//then go to the order of that customer
+            for(Order order:this.getOrders()){//then go to the order of that customer
                 
                     
-    //                     double discount=this.getDiscount();//here we are getting the discount of the registered customer
-    //                     totalOrderValue+=order.getTotalOrderValue()*((1-discount)/100);
-    //                 }
+                        double discount=this.membership.getDiscount();//here we are getting the discount of the registered customer
+                        totalOrderValue+=order.getTotalOrderValue()*((1-discount)/100);
+                    }
             
             
         
 
-    //     return totalOrderValue;
-    // }
+        return totalOrderValue;
+    }
 }
         
 
