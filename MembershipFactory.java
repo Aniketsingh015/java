@@ -1,5 +1,5 @@
 public class MembershipFactory {
-    public Membership getmembership(String membershipType){
+    public Membership getMembership(String membershipType){
 
         if(membershipType.equalsIgnoreCase("Platinum")){
             Membership platinumMembership=new Membership();
