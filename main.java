@@ -50,6 +50,9 @@ public class main {
         regularOrder.addOrderItem(orderItem1);
         regularOrder.addOrderItem(orderItem2);
 
+        var BillingManager=new BillingManager();
+        BillingManager.generateBill(regularOrder);
+
         // the regular customer made the payment and order was handed over
         regularCustomer.addOrders(regularOrder);
 
@@ -71,14 +74,18 @@ public class main {
     // registeredCustomer.setmembershipType("gold");
 
 
-    var membership=new Membership();
-    membership.setmembershipType("platinum");
-    membership.setDiscount(20);
-    membership.setFees(20000.0);
+    // var membership=new Membership();
+    // membership.setmembershipType("platinum");
+    // membership.setDiscount(20);
+    // membership.setFees(20000.0);
+    // registeredCustomer.setmembership(membership);
+
+// create the factory object to get the membership object
+var MembershipFactory=new MembershipFactory();
+    // call the method to get  membership object
+    var membership=MembershipFactory.getMembership("Platinum");
     registeredCustomer.setmembership(membership);
 
-
-    
 
      //registered customer wants to buy two pants and 2 shirt
        var orderItem3=new OrderItem();
@@ -96,6 +103,7 @@ public class main {
 
         registerOrder.addOrderItem(orderItem3);
         registerOrder.addOrderItem(orderItem4);
+         BillingManager.generateBill(registerOrder);
 // now payment is done and order is handed over to the registered customer
         registeredCustomer.addOrders(registerOrder);
         company.addCustomer(registeredCustomer);
