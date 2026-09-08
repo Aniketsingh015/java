@@ -33,7 +33,7 @@ class Customer{
         this.orders.add(order);
     }
 
-    // consturctor
+    // consturctor  
     public Customer(String Name){
         // initializing the list
         this .orders=new ArrayList<Order>();
@@ -58,6 +58,8 @@ class Customer{
 
         return totalOrderValue;
     }
+
+    
         
 
 }
